@@ -4,65 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .key{
-            background: grey;
-           padding: 20px;
-            border: 1px solid black;
-            color: blanchedalmond;
-            font-size: 20px;
-            
-        }
-        .row__history{
-            background: rgb(232, 180, 7);
-            max-width: 150px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 5px;
-        }
-    </style>
+   <link rel="stylesheet" href="./css/style.css">
     <title>TASK-21</title>
 </head>
 <body>
+    <div class="container">
+        <main class="main">
+            <h1 class="main__title"></h1>
+            <div class="main_top__container">
+                <p class="main_top__keyCode"></p>
+                <h2>Key Code Information</h2>
+            </div>
+        </main>
+    </div>
     <div class="row">
         <div class="row__key"></div>
         <div class="row__code"></div>
         <div class="row__which"></div>
         <div class="row__history"></div>
-      
     </div>
-    <script>
-        const rowKey = document.querySelector('.row__key');
-        const rowCode = document.querySelector('.row__code');
-        const rowWhich = document.querySelector('.row__which');
-        const keyHistory = document.querySelector('.row__history');
-        const arr = [];
-
-        document.body.addEventListener('keydown', function(event){
-            rowKey.innerText = event.key;
-            rowCode.innerText = event.code;
-            rowWhich.innerText = event.which;
-
-            arr.unshift(event.key);
-
-            let keyBlock = document.createElement('div');
-            keyBlock.classList.add('key')
-            let firstElement = keyHistory.firstChild;
-        
-            arr.reverse().forEach((el, i) => {
-
-                keyBlock.innerHTML = el;
-                keyHistory.insertBefore(keyBlock, firstElement);
-
-                if (i > 3) {
-                    arr.pop();
-                    keyHistory.lastElementChild.remove();
-                }
-            });
-        })
-    </script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

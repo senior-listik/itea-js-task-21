@@ -1,0 +1,28 @@
+.key {
+  background: grey;
+  padding: 20px;
+  border: 1px solid black;
+  color: blanchedalmond;
+  font-size: 20px;
+}
+
+.row__history {
+  background: rgb(232, 180, 7);
+  max-width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
