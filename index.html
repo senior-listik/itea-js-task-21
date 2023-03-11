@@ -8,21 +8,64 @@
     <title>TASK-21</title>
 </head>
 <body>
+    <header class="header"></header>
     <div class="container">
         <main class="main">
+            <!-- hidden block -->
+            <div class="main__messageContainer hide">
+                <div class="main__message">
+                    <h2>Press any key to get the JavaScript event keycode info</h2>
+                </div>
+            </div>
+            <!-- embeddable block -->
             <h1 class="main__title"></h1>
-            <div class="main_top__container">
-                <p class="main_top__keyCode"></p>
+            <div class="main-top__container">
+                <p class="main-top__keyCode"></p>
                 <h2>Key Code Information</h2>
+            </div>
+            <div class="main-body">
+                <div class="main-body__card key">
+                    <div class="card__header"><h3></h3></div>
+                    <div class="card__body">
+                        <div class="card__bodyKey"></div>
+                    </div>
+                    <div class="card__footer"><p></p></div>
+                </div>
+                <div class="main-body__card location">
+                    <div class="card__header"><h3></h3></div>
+                    <div class="card__body">
+                        <div class="card__bodylocation"></div>
+                    </div>
+                    <div class="card__footer"><p></p></div>
+                </div>
+                <div class="main-body__card code">
+                    <div class="card__header"><h3></h3></div>
+                    <div class="card__body">
+                        <div class="card__bodyCode"></div>
+                    </div>
+                    <div class="card__footer"><p></p></div>
+                </div>
+                <div class="main-body__card which">
+                    <div class="card__header"><h3></h3></div>
+                    <div class="card__body">
+                        <div class="card__bodyWhich"></div>
+                    </div>
+                    <div class="card__footer"><p></p></div>
+                </div>
+                <div class="main-body__card history">
+                    <div class="card__header"><h3></h3></div>
+                    <div class="card__body">
+                        <div class="card__bodyHistory"></div>
+                    </div>
+                    <div class="card__footer"><p></p></div>
+                </div>
             </div>
         </main>
     </div>
-    <div class="row">
-        <div class="row__key"></div>
-        <div class="row__code"></div>
-        <div class="row__which"></div>
-        <div class="row__history"></div>
-    </div>
+   
+    <footer class="footer">
+        <div class="footer__link"></div>
+    </footer>
     <script src="./js/main.js"></script>
 </body>
 </html>
