@@ -34,22 +34,29 @@ document.body.addEventListener('keydown', function (event) {
 
 
     arr.reverse().forEach((el, i) => {
+        console.log(arr[0] !== el);
+        
 
+    
         keyBlock.innerHTML = el;
         topKey.innerText = el;
         addTopTitle.innerHTML = `JavaScript Key Code ${event.which}`;
+         
         history.insertBefore(keyBlock, firstElement);
 
         switch (event.code) {
-        case 'Space': cardKey.innerText = 'Space';
-        case 'Space': keyBlock.innerText = 'Space';
+            case 'Space': cardKey.innerText = 'Space';
+            case 'Space': keyBlock.innerText = 'Space';
             case 'Space': topKey.innerText = 'Space';
-                 case 'Space': addTopTitle.innerText = `JavaScript Key Code ${event.which}`;
+            case 'Space': addTopTitle.innerText = `JavaScript Key Code ${event.which}`;
         }
+   
         if (i > 3) {
             arr.pop();
             history.lastElementChild.remove();
+        
         }
+        
     });
 })
 // key: "t"

@@ -1,26 +1,16 @@
 
-
-// .row__history {
-//     background: rgb(232, 180, 7);
-//     max-width: 150px;
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     gap: 5px;
-// }
 *,*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    %flexcenter{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 }
+
+%flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 body{
     font-family: 'Open Sans';
 }
@@ -34,14 +24,23 @@ $text-desc: #494949;
 
 .wrapper {
     min-height: 100%;
+    min-width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
 }
 
 .header, .footer {
-    height: 40px;
+    
     background: $main-bg;
+    @extend %flexcenter;
+    .logo{
+        color: $prim-color;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1.5;
+    }
 }
 
 .container {
@@ -101,13 +100,12 @@ $text-desc: #494949;
 
 .main-body {
     @extend %flexcenter;
+    flex-wrap: wrap;
     align-items: start;
     gap: 20px;
     padding: 20px 0 0 0;
-display: flex;
     &__card {
-        flex: 1 0 200px;
-        // height: 300px;
+        flex: 0 0 200px;
         display: flex;
         flex-direction: column;
         transition-duration: 0.1s;
@@ -202,6 +200,7 @@ display: flex;
 .history {}
 
 .footer {
-    @extend %flexcenter;
-    &__link {width: 20px;height: 20px;display: block;}
+    &__link {width: 30px;height: 30px;display: block;
+    margin: 10px;
+    }
 }

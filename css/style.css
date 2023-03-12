@@ -4,7 +4,8 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-* .footer, * .card__bodyHistory, * .card__body, * .main-body, * .main__message, * .container {
+
+.card__bodyHistory, .card__body, .main-body, .main__message, .container, .header, .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,6 +23,7 @@ body {
 
 .wrapper {
   min-height: 100%;
+  min-width: 100%;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,11 +32,19 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .header, .footer {
-  height: 40px;
   background: rgb(237, 134, 60);
+}
+.header .logo, .footer .logo {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .container {
@@ -94,19 +104,18 @@ body {
 }
 
 .main-body {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
   gap: 20px;
   padding: 20px 0 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 .main-body__card {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 200px;
-          flex: 1 0 200px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 200px;
+          flex: 0 0 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,7 +196,8 @@ body {
 }
 
 .footer__link {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   display: block;
+  margin: 10px;
 }
