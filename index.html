@@ -13,7 +13,7 @@
         <div class="container">
             <main class="main">
                 <!-- hidden block -->
-                <div class="main__message hide">
+                <div class="main__message ">
                     <div>
                         <h2>Press any key to get the JavaScript event keycode info</h2>
                     </div>
@@ -22,64 +22,69 @@
                 <h1 class="title">JavaScript Key Code</h1>
 
                 <!-- embeddable block -->
-                <div class="main-top">
-                    <p class="main-top__keyCode">W</p>
-                    <h2 class="main-top__title">Key Code Information</h2>
-                </div>
-                <div class="main-body">
-                    <div class="main-body__card key">
-                        <div class="card__header">
-                            <h3>event.key</h3>
-                        </div>
-                        <div class="card__body">
-                            <div class="card__bodyKey"></div>
-                        </div>
-                        <div class="card__footer">
-                            <p>The value of the key pressed. Accounts for modifiers keys that return CAPS and alternate chars.</p>
-                        </div>
+                <div class="main__content ">
+                    <div class="main-top">
+                        <p class="main-top__keyCode"></p>
+                        <h2 class="main-top__title">Key Code Information</h2>
                     </div>
-                    <div class="main-body__card location">
-                        <div class="card__header">
-                            <h3>event.location</h3>
+                    <div class="main-body">
+                        <div class="main-body__card key">
+                            <div class="card__header">
+                                <h3>event.key</h3>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__bodyKey"></div>
+                            </div>
+                            <div class="card__footer">
+                                <p>The value of the key pressed. Accounts for modifiers keys that return CAPS and alternate chars.</p>
+                            </div>
                         </div>
-                        <div class="card__body">
-                            <div class="card__bodylocation"></div>
+                        <div class="main-body__card location">
+                            <div class="card__header">
+                                <h3>event.location</h3>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__bodylocation"></div>
+                            </div>
+                            <div class="card__footer">
+                                <p>Some keys exist more than once on your keyboard. This provides the location of the key pressed. Try it
+                                    with both shifts.</p>
+                            </div>
                         </div>
-                        <div class="card__footer">
-                            <p>Some keys exist more than once on your keyboard. This provides the location of the key pressed. Try it with both shifts.</p>
+                        <div class="main-body__card code">
+                            <div class="card__header">
+                                <h3>event.code</h3>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__bodyCode"></div>
+                            </div>
+                            <div class="card__footer">
+                                <p>The physical key on the keyboard. Doesn't care if you are holding a modifier like Shift.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="main-body__card code">
-                        <div class="card__header">
-                            <h3>event.code</h3>
+                        <div class="main-body__card which">
+                            <div class="card__header">
+                                <h3>event.which</h3>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__bodyWhich"></div>
+                            </div>
+                            <div class="card__footer">
+                                <p>event.which and event.keyCode are deprecated in modern browsers. Use .key or .code instead</p>
+                            </div>
                         </div>
-                        <div class="card__body">
-                            <div class="card__bodyCode"></div>
-                        </div>
-                        <div class="card__footer">
-                            <p>The physical key on the keyboard. Doesn't care if you are holding a modifier like Shift.</p>
-                        </div>
-                    </div>
-                    <div class="main-body__card which">
-                        <div class="card__header">
-                            <h3>event.which</h3>
-                        </div>
-                        <div class="card__body">
-                            <div class="card__bodyWhich"></div>
-                        </div>
-                        <div class="card__footer">
-                            <p>event.which and event.keyCode are deprecated in modern browsers. Use .key or .code instead</p>
-                        </div>
-                    </div>
-                    <div class="main-body__card history">
-                        <div class="card__header">
-                            <h3>History</h3>
-                        </div>
-                        <div class="card__body">
-                            <div class="card__bodyHistory"></div>
-                        </div>
-                        <div class="card__footer">
-                            <p>This is the description we have created. Think it can be improved? PR us on GitHub</p>
+                        <div class="main-body__card history">
+                            <div class="card__header">
+                                <h3>History</h3>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__bodyHistory">
+                    
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <p>This is the description we have created. Think it can be improved? PR us on GitHub</p>
+                            </div>
                         </div>
                     </div>
                 </div>

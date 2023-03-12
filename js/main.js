@@ -1,28 +1,54 @@
-const rowKey = document.querySelector('.row__key');
-const rowCode = document.querySelector('.row__code');
-const rowWhich = document.querySelector('.row__which');
-const keyHistory = document.querySelector('.row__history');
+const cardKey = document.querySelector('.card__bodyKey');
+const cardCode = document.querySelector('.card__bodyCode');
+const cardWhich = document.querySelector('.card__bodyWhich');
+const cardLocation = document.querySelector('.card__bodylocation');
+const history = document.querySelector('.card__bodyHistory');
+const topKey = document.querySelector('.main-top__keyCode');
+const addTopTitle = document.querySelector('.title');
 const arr = [];
 
-document.body.addEventListener('keydown', function(event){
-    rowKey.innerText = event.key;
-    rowCode.innerText = event.code;
-    rowWhich.innerText = event.which;
+const message = document.querySelector('.main__message');
+const mainContent = document.querySelector('.main__content')
+
+document.body.addEventListener('keydown', function (event) {
+    message.classList.add('hide');
+    mainContent.classList.add('visible');
+    cardKey.innerText = event.key;
+    cardCode.innerText = event.code;
+    cardWhich.innerText = event.which;
+    
+    switch (event.location) {
+        case 0: cardLocation.innerText = 'General keys'; break;
+        case 1: cardLocation.innerText = 'left-side modifier keys'; break;
+        case 2: cardLocation.innerText = 'Right-side modifier keys'; break;
+        case 3: cardLocation.innerText = 'Numpad'; break;
+
+    }
     console.log(event);
     arr.unshift(event.key);
 
-    let keyBlock = document.createElement('div');
-    keyBlock.classList.add('key')
-    let firstElement = keyHistory.firstChild;
+    let keyBlock = document.createElement('button');
+    keyBlock.classList.add('history__key')
+    let firstElement = history.firstChild;
+
+
 
     arr.reverse().forEach((el, i) => {
 
         keyBlock.innerHTML = el;
-        keyHistory.insertBefore(keyBlock, firstElement);
+        topKey.innerText = el;
+        addTopTitle.innerHTML = `JavaScript Key Code ${event.which}`;
+        history.insertBefore(keyBlock, firstElement);
 
+        switch (event.code) {
+        case 'Space': cardKey.innerText = 'Space';
+        case 'Space': keyBlock.innerText = 'Space';
+            case 'Space': topKey.innerText = 'Space';
+                 case 'Space': addTopTitle.innerText = `JavaScript Key Code ${event.which}`;
+        }
         if (i > 3) {
             arr.pop();
-            keyHistory.lastElementChild.remove();
+            history.lastElementChild.remove();
         }
     });
 })
@@ -32,9 +58,4 @@ document.body.addEventListener('keydown', function(event){
 // event.which
 // history
 
-//  <div class="row">
-//         <div class="row__key"></div>
-//         <div class="row__code"></div>
-//         <div class="row__which"></div>
-//         <div class="row__history"></div>
-//     </div>
+ 

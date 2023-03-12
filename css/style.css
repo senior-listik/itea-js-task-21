@@ -4,7 +4,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-* .footer, * .card__body, * .main-body, * .main__message, * .container {
+* .footer, * .card__bodyHistory, * .card__body, * .main-body, * .main__message, * .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,9 +64,16 @@ body {
   font-size: 22px;
   font-weight: 500;
 }
+.main__content {
+  display: none;
+}
 
 .hide {
   display: none;
+}
+
+.visible {
+  display: block;
 }
 
 .title {
@@ -83,7 +90,7 @@ body {
 .main-top__keyCode {
   text-align: center;
   font-weight: 700;
-  font-size: 120px;
+  font-size: 100px;
 }
 
 .main-body {
@@ -133,11 +140,16 @@ body {
   color: #ffffff;
 }
 .card__body {
-  height: 200px;
+  height: 250px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   background: #ffffff;
+}
+.card__body * {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
 }
 .card__footer {
   background: rgb(185, 200, 248);
@@ -148,9 +160,32 @@ body {
   font-size: 10px;
   text-align: justify;
 }
-.card__bodylocation {
-  font-size: 30px;
+.card__bodyHistory {
+  padding: 26px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
 }
+
+.history__key {
+  padding: 0 5px;
+  min-width: 60px;
+  min-height: 60px;
+  color: #262d3d;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #262d3d;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  cursor: pointer;
+}
+
 .footer__link {
   width: 20px;
   height: 20px;
