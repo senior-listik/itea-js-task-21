@@ -10,7 +10,7 @@ html, body {
   height: 100%;
 }
 
-.footer__icon, .footer__link, .card__bodyHistory, .card__body, .main-body, .main__message, .header, .footer {
+.footer__icon, .footer__link, .card__bodyHistory, .card__body, .main-body, .main__inp .icon__container, .main__message, .header, .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,17 +93,42 @@ a {
   display: none;
 }
 .main__inp {
-  height: 30px;
+  height: 40px;
   margin: 20px auto;
-  display: block;
   border-radius: 5px;
   border: 1px solid #494949;
-  display: none;
+  background: #ffffff;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
 }
-@media (max-width: 769px) {
+@media (min-width: 769px) {
   .main__inp {
-    display: block;
+    display: none;
   }
+}
+.main__inp .icon__container {
+  width: 20px;
+  height: 100%;
+}
+.main__inp .icon__container svg {
+  fill: #494949;
+}
+.main__inp input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 15px;
+}
+.main__inp .input__container {
+  width: 90%;
+  height: 100%;
 }
 
 .hide {

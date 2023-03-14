@@ -83,14 +83,37 @@ $link-hover-color: rgb(13, 170, 198);
         display: none;
     }
     &__inp{
-        height: 30px;
+        @media (min-width: 769px) {
+                display: none;
+            }
+        height: 40px;
         margin: 20px auto;
-        display: block;
         border-radius: 5px;
         border: 1px solid $text-desc;
-        display: none;
-        @media (max-width: 769px){
-            display: block;
+        background: $prim-color;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        // justify-content: space-between;
+        padding: 5px 10px;
+        .icon__container{
+            width: 20px;
+            height: 100%;
+    @extend %flexcenter;
+            & svg {
+                fill: $text-desc;
+            }
+        }
+        input {
+            height: 100%;
+            width: 100%;
+            border: none;
+            font-size: 15px;
+        }
+        .input__container{
+            width: 90%;
+            height: 100%;
         }
     }
 }
