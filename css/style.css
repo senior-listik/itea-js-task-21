@@ -76,7 +76,7 @@ a {
 }
 .main__message {
   margin-top: 30px;
-  width: 350px;
+  max-width: 350px;
   height: 150px;
   background: #ffffff;
   border-radius: 10px;
@@ -94,11 +94,16 @@ a {
 }
 .main__inp {
   height: 30px;
-  margin: 10px auto;
+  margin: 20px auto;
   display: block;
   border-radius: 5px;
   border: 1px solid #494949;
   display: none;
+}
+@media (max-width: 769px) {
+  .main__inp {
+    display: block;
+  }
 }
 
 .hide {

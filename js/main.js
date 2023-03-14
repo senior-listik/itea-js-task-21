@@ -1,3 +1,5 @@
+// Created variables
+
 const cardKey = document.querySelector('.card__bodyKey');
 const cardCode = document.querySelector('.card__bodyCode');
 const cardWhich = document.querySelector('.card__bodyWhich');
@@ -5,10 +7,12 @@ const cardLocation = document.querySelector('.card__bodylocation');
 const history = document.querySelector('.card__bodyHistory');
 const topKey = document.querySelector('.main-top__keyCode');
 const addTopTitle = document.querySelector('.title');
+
 const arr = [];
 
 const message = document.querySelector('.main__message');
-const mainContent = document.querySelector('.main__content')
+const mainContent = document.querySelector('.main__content');
+const input = document.querySelector('.main__inp');
 
 document.body.addEventListener('keydown', function (event) {
     message.classList.add('hide');
@@ -59,6 +63,8 @@ document.body.addEventListener('keydown', function (event) {
         
     });
 })
+
+input.addEventListener('click', )
 // key: "t"
 // event.location
 // event.code
