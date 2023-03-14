@@ -74,6 +74,11 @@ a {
   margin: 0 auto;
   padding: 20px;
 }
+@media (max-width: 426px) {
+  .main {
+    max-width: 415px;
+  }
+}
 @media (max-width: 321px) {
   .main {
     max-width: 320px;

@@ -65,7 +65,9 @@ $link-hover-color: rgb(13, 170, 198);
     height: 100%;
     margin: 0 auto;
     padding: 20px;
-    
+    @media (max-width: 426px) {
+            max-width: 415px;
+        }
     @media (max-width: 321px) {
             max-width: 320px;
         }
