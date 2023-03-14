@@ -57,6 +57,7 @@ $link-hover-color: rgb(13, 170, 198);
     background: $bg-body;
     display: flex;
     justify-content: center;
+    
 }
     
 .main {
@@ -64,6 +65,9 @@ $link-hover-color: rgb(13, 170, 198);
     height: 100%;
     margin: 0 auto;
     padding: 20px;
+    @media (max-width: 321px) {
+            max-width: 320px;
+        }
     &__message{
         margin-top: 30px;
         max-width: 350px;

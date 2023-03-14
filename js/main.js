@@ -64,7 +64,7 @@ document.body.addEventListener('keydown', function (event) {
     });
 })
 
-input.addEventListener('click', )
+// input.addEventListener('click', )
 // key: "t"
 // event.location
 // event.code
